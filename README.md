@@ -8,7 +8,6 @@ Puntos 2 y 3: ascenso de colinas y temple simulado.
 .
 ├── punto_2_ascenso_colinas.py    # Punto 2
 ├── punto_3_temple_simulado.py    # Punto 3
-├── parcial2_puntos_2_y_3.tex     # Informe en LaTeX
 ├── ejecucion_punto_2.png         # Captura de ejecución, punto 2
 ├── ejecucion_punto_3.png         # Captura de ejecución, punto 3
 └── README.md
