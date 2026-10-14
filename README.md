@@ -16,19 +16,13 @@ Puntos 2 y 3: ascenso de colinas y temple simulado.
 
 ## Requisitos
 
-- Python 3.8+ (solo biblioteca estándar)
-- Para compilar el informe (Debian/Ubuntu):
-
-```bash
-sudo apt install texlive-latex-extra texlive-lang-spanish
-```
+- Python 3.8+
 
 ## Ejecución
 
 ```bash
 python3 punto_2_ascenso_colinas.py
 python3 punto_3_temple_simulado.py
-pdflatex parcial2_puntos_2_y_3.tex
 ```
 
 ## Punto 2 – Ascenso de colinas
