@@ -1,5 +1,6 @@
 import math
 import random
+import matplotlib.pyplot as plt
 
 
 def energia(x):
@@ -39,7 +40,32 @@ def temple_simulado(x0=5, T0=10.0, alfa=0.90, iteraciones=100, semilla=42):
 if __name__ == "__main__":
     casos_manuales()
     mejor, hist_T, hist_E = temple_simulado()
+    
     print(f"Mejor solución: x = {mejor}")
     print(f"Energía mínima: E = {energia(mejor)}")
     print("Historial de temperatura:", [round(t, 4) for t in hist_T])
     print("Historial de energía:", hist_E)
+
+    # --- Generación y guardado de la gráfica ---
+    plt.figure(figsize=(10, 5))
+
+    # Subgráfica 1: Evolución de la Energía
+    plt.subplot(1, 2, 1)
+    plt.plot(hist_E, color='purple', drawstyle='steps-post', linewidth=1.5)
+    plt.title('Evolución de la Energía E(x)')
+    plt.xlabel('Iteración')
+    plt.ylabel('Energía E(x)')
+    plt.grid(True, linestyle='--', alpha=0.6)
+
+    # Subgráfica 2: Evolución de la Temperatura
+    plt.subplot(1, 2, 2)
+    plt.plot(hist_T, color='darkorange', linewidth=1.5)
+    plt.title('Enfriamiento Geométrico (T)')
+    plt.xlabel('Iteración')
+    plt.ylabel('Temperatura T')
+    plt.grid(True, linestyle='--', alpha=0.6)
+
+    plt.tight_layout()
+    plt.savefig('temple_simulado_grafica.png', dpi=300)
+    print("\nGráfica guardada exitosamente como 'temple_simulado_grafica.png'.")
+    plt.show()
