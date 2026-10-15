@@ -8,6 +8,7 @@
 ├── punto_2_ascenso_colinas.py    # Punto 2
 ├── punto_3_temple_simulado.py    # Punto 3
 ├── punto_4_aco.py                # Punto 4
+├── informe.pdf                   # Informe Final
 
 └── README.md
 ```
